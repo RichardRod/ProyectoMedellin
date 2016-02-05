@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
-                try {//
+                try {///
                     Object object = JSONValue.parse(response);
                     org.json.simple.JSONArray array = (org.json.simple.JSONArray) object;
                     for (int i = 0; i < array.size(); i++) {

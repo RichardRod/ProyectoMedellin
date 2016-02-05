@@ -1,34 +1,19 @@
 package cucei.mx.udg.proyectomedellin;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Base64;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.json.simple.JSONValue;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private String url = "http://mandt.com.mx/mecanix/getDataClienteJson.php";
-    private String urlBarbara = "http://mandt.com.mx/Barbaro/";
+    private String urlBarbara = "http://floval.mx/Barbaro/index.php?control=twitter&accion=obtenerNoticias";
 
     private ListView listView;
     private String url1 = "http://jsonplaceholder.typicode.com/posts";

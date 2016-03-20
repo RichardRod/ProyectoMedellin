@@ -31,6 +31,6 @@ public class News {
 
     @Override
     public String toString() {
-        return urlImage + "|" + contenido;
+        return "URL:" + urlImage + "|" + contenido;
     }
 }

@@ -1,6 +1,7 @@
 package cucei.mx.udg.proyectomedellin;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,12 +37,18 @@ public class NewsArrayAdapter extends ArrayAdapter<News> {
 
         News item = getItem(position);
 
-        //ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
         TextView textView = (TextView) convertView.findViewById(R.id.text_contenido);
+        textView.setTextColor(Color.BLACK);
 
-        //Picasso.with(getContext()).load(item.getUrlImage()).placeholder(R.mipmap.noticias).into(imageView);
+        if(item.getUrlImage().length() != 0) {
+            Picasso.with(getContext()).load(item.getUrlImage()).placeholder(R.mipmap.news_icon).into(imageView);
+        }
+        else{
+            imageView.setImageResource(R.mipmap.udg_uno);
+        }
         //Toast.makeText(getContext(), item.getUrlImage(), Toast.LENGTH_SHORT).show();
-        textView.setText(item.getContenido());
+        textView.setText(item.toString());
 
         return  convertView;
     }

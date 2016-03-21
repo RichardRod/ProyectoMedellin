@@ -16,7 +16,7 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);//
 
-        final Bundle bundle = getIntent().getExtras();
+        final Bundle bundle = getIntent().getExtras();//
 
         ImageView imageView = (ImageView) findViewById(R.id.imageNewActivity);
         TextView textView = (TextView) findViewById(R.id.txtNewActivity);
